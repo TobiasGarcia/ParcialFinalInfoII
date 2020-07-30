@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include "gsimulation.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -16,5 +17,6 @@ public:
 
 private:
     Ui::Widget *ui;
+    GSimulation *gsimulation;
 };
 #endif // WIDGET_H
