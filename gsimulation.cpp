@@ -50,6 +50,15 @@ void GSimulation::add_astro(double x0, double y0, double vx, double vy, double m
     data.push_back(astro_data);
 }
 
+void GSimulation::keyPressEvent(QKeyEvent *event) {
+
+    if (!event->isAutoRepeat() and  (event->key() == Qt::Key_Return))  {
+        ball = new Ball();
+        scene->addItem(ball);
+        balls.append(ball);
+    }
+}
+
 void GSimulation::move() {
 
     for (unsigned short i = 0; i < data.size(); i++) {
